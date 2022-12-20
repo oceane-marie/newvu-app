@@ -1,15 +1,63 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import "./App.css";
+import App from './pages/App';
+import ErrorPage from "./pages/error-page";
+import Single from "./pages/Single";
+import Book from './pages/Book';
+import Register from "./pages/Register";
+
 import reportWebVitals from './reportWebVitals';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import { DarkModeProvider } from './DarkModeContext';
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "experiences/:experienceId",
+    element: <Single />,
+  },
+  {
+    path: "experiences/:experienceId/book",
+    element: <Book />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <DarkModeProvider>
+      <RouterProvider router={router}/>
+    </DarkModeProvider>
   </React.StrictMode>
 );
+
+// mapping exercices
+// const nums = [1, 2, 3, 4, 5]
+// const squared = nums.map(num => num * num)
+// console.log(squared)
+
+// const names = ["Louis", "Andrew", "Mila", "Joan", "Romy"]
+// const capitalized = names.map(name => `${name[0].toUpperCase()}${name.slice(1)}`)
+// console.log(capitalized)
+
+// const pokemons = ["Bulbasseur", "Charmander", "Squirtle"]
+// pokemons.map((pokemon) => {
+//   console.log(`<p>${pokemon}<p/>`)
+// })
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
