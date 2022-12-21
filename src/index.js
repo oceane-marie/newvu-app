@@ -7,7 +7,7 @@ import ErrorPage from "./pages/error-page";
 import Single from "./pages/Single";
 import Book from './pages/Book';
 import Register from "./pages/Register";
-import SignIn from "./components/SignIn";
+import SignIn from "./pages/SignIn";
 
 import reportWebVitals from './reportWebVitals';
 import {

@@ -1,5 +1,5 @@
 
-export default function SignIn(params) {
+export default function SignIn(props) {
   return(
     <div>
       <p>Sign in page</p>
