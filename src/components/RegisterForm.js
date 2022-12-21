@@ -1,4 +1,6 @@
 import {useRef, useState, useEffect} from 'react';
+import { Link } from "react-router-dom";
+
 
 // 1 lower or uppercase followed by btw 3 and 23 characters lower/upper/numbers
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
@@ -185,9 +187,9 @@ export default function RegisterForm(props) {
               <h3>Sign up</h3>
         </button>
         <p>Already registered?</p>
-        <a href='#' className={`btn-send w-25 ${props.darkMode ? "clear" : "dark"}`}>
+        <Link to="/signin" className={`btn-send w-25 ${props.darkMode ? "clear" : "dark"}`}>
           <p className='tx-center'>Sign in</p>
-        </a>
+        </Link>
         </form>
       </section>
     )}
