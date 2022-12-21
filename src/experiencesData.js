@@ -94,7 +94,7 @@ module.exports = [
     gallery:[
     {
       key: 1,
-      url: "https://images.pexels.com/photos/1578531/pexels-photo-1578531.jpeg",
+      url: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fG1hbnxlbnwwfDF8MHx8&auto=format&fit=crop&w=800&q=60",
     },
     {
       key: 2,
