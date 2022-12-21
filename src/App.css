@@ -103,7 +103,7 @@ nav{
 .card-content{
   padding: 20px;
   position: relative;
-  width: 300px;
+  width: 248px;
 }
 
 .card-wrapper{
@@ -121,6 +121,9 @@ nav{
 .card-img{
   border-radius: 12px;
   height: 330px;
+  width: 248px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .card-text p{
@@ -139,7 +142,7 @@ nav{
   background-color: #FFFFFF;
   padding: 0px 7px;
   position: absolute;
-  left: 167px;
+  left: 186px;
   top: 32px;
   font-weight: bold;
   font-size: 12px;
@@ -520,5 +523,62 @@ input[type='radio']:checked:after {
     display: inline-grid;
     margin: 32px 24px;
     width: 80%;
+  }
+}
+
+@media (max-width: 1195px) {
+  .experience-content {
+    width: 500px;
+  }
+
+  .experience-img{
+    width: 500px;
+  }
+
+  .images{
+    display: none;
+  }
+}
+
+
+@media (max-width: 890px) {
+  .experience-content {
+    width: 450px;
+  }
+
+  .experience-img{
+    width: 300px;
+  }
+
+  .images{
+    display: none;
+  }
+  .ctr-form{
+    width: 90vw;
+  }
+
+
+}
+
+@media (max-width: 550px) {
+  .experience-content {
+    width: 450px;
+  }
+
+  .experience-img{
+    display: none;
+  }
+
+  .images{
+    display: none;
+  }
+
+  .ctr-activity {
+    width: 32%;
+    padding: 7px 30px;
+  }
+
+  .img-form {
+    display: none;
 }
 }
