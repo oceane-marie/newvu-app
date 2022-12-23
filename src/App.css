@@ -510,14 +510,20 @@ input[type='radio']:checked:after {
   width: 50%;
 }
 
-.mb-5{
+.mb-m5{
   margin-bottom: -5px;
 }
 
+.mb-p5{
+  margin-bottom: 5px;
+}
+
+.br-full{
+  border-radius: 4%;
+}
 
 .tx-center{
   text-align: center;
-  margin-bottom: 5px;
 }
 
 @media (max-width: 680px) {

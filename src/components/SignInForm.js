@@ -66,12 +66,12 @@ export default function SignIn(props) {
     <div className='ctr-centered'>
       {success ? (
         <section className={`ctr-form h-100 ${props.darkMode ? "dark-shadow" : "clear-shadow"}`}>
-          <img src="https://images.unsplash.com/photo-1520453803296-c39eabe2dab4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aGVsbG98ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="user" className="img-form"/>
-          <h2>You are logged in!</h2>
+          <img src="https://images.unsplash.com/photo-1520453803296-c39eabe2dab4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aGVsbG98ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="user" className="img-form w-100 br-full"/>
+          {/* <h2>You are logged in!</h2>
           <br/>
           <p>
             <a href="#">Go to home</a>
-          </p>
+          </p> */}
         </section>
       ) : (<section className={`ctr-form h-100 ${props.darkMode ? "dark-shadow" : "clear-shadow"}`}>
       <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
@@ -110,7 +110,7 @@ export default function SignIn(props) {
           </h3>
         </button>
         <p> Need an account?</p>
-        <Link to="/register" className={`btn-send w-50 ${props.darkMode ? "clear" : "dark"}`}><p className='tx-center mb-5'>Register</p></Link>
+        <Link to="/register" className={`btn-send w-50 ${props.darkMode ? "clear" : "dark"}`}><p className='tx-center mb-m5'>Register</p></Link>
       </form>
     </section>
     )}
