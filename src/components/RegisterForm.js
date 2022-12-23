@@ -81,7 +81,7 @@ export default function RegisterForm(props) {
       <section className={`ctr-form ${props.darkMode ? "dark-shadow" : "clear-shadow"}`}>
         <img src="https://images.unsplash.com/photo-1518893494013-481c1d8ed3fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZXhwZXJpZW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="new user" className="img-form"/>
         <h2>Sucess!</h2>
-        <a href="#" className={`btn-send w-25 ${props.darkMode ? "clear" : "dark"}`}>
+        <a href="#" className={`btn-send w-50 ${props.darkMode ? "clear" : "dark"}`}>
           <p className='tx-center'>Sign in</p>
         </a>
       </section>
@@ -187,7 +187,7 @@ export default function RegisterForm(props) {
               <h3>Sign up</h3>
         </button>
         <p>Already registered?</p>
-        <Link to="/signin" className={`btn-send w-25 ${props.darkMode ? "clear" : "dark"}`}>
+        <Link to="/signin" className={`btn-send w-50 ${props.darkMode ? "clear" : "dark"}`}>
           <p className='tx-center'>Sign in</p>
         </Link>
         </form>

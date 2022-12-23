@@ -110,7 +110,7 @@ export default function SignIn(props) {
           </h3>
         </button>
         <p> Need an account?</p>
-        <Link to="/register" className={`btn-send w-25 ${props.darkMode ? "clear" : "dark"}`}><p className='tx-center mb-5'>Register</p></Link>
+        <Link to="/register" className={`btn-send w-50 ${props.darkMode ? "clear" : "dark"}`}><p className='tx-center mb-5'>Register</p></Link>
       </form>
     </section>
     )}
