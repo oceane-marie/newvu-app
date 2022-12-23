@@ -1,10 +1,17 @@
 
-import { useRef, useSate, useEffect, useState } from "react"
+import { useRef, useEffect, useState } from "react"
 import { Link } from "react-router-dom";
+
+// import { useContext } from "react";
+// import AuthContext from "../context/AuthProvider";
+
+// import axios from "../api/axios"
+// const LOGIN_URL = "/auth";
 
 export default function SignIn(props) {
   const userRef = useRef();
   const errRef = useRef();
+  // const {setAuth} = useContext(AuthContext)
 
   const [user, setUser] = useState("");
   const [pwd, setPwd] = useState("");
@@ -22,6 +29,34 @@ export default function SignIn(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(user, pwd)
+    // with axios
+    // try {
+    //   const response = await axios.post(LOGIN_URL,
+    //     JSON.stringify({user, pwd}),
+    //     {
+    //       headers: {'Content-Type' : 'application/json'},
+    //       withCredentials: true
+    //     }
+    //   );
+    //   setUser("")
+    //   setPwd("")
+    //   console.log(JSON.stringify(response?.data))
+    //   const accessToken = response?.data.accessToken;
+    //   const roles = response?.data.roles;
+    //   // saved in global context
+    //   setAuth({user, pwd, roles, accessToken})
+    // } catch (err) {
+    //   if(!err?.response){
+    //     setErrMsg('No server response')
+    //   } else if (err.response?.status === 400) {
+    //     setErrMsg('Missing username or password')
+    //   } else if (err?.response === 401) {
+    //     setErrMsg('Unauthorized')
+    //   } else {
+    //     setErrMsg('Login failed')
+    //   }
+    //   errRef.current.focus();
+    // }
     setUser("")
     setPwd("")
     setSuccess(true)

@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar';
 import Form from '../components/Form';
 import React, { useContext } from 'react';
-import { DarkModeContext } from '../DarkModeContext';
+import { DarkModeContext } from '../context/DarkModeContext';
 
 export default function Book() {
   const {darkMode, toggleDarkMode} = useContext(DarkModeContext)

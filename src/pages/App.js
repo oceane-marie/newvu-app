@@ -3,7 +3,7 @@ import Hero from "../components/Hero";
 import Card from "../components/Card";
 import data from '../experiencesData';
 import React, {useContext} from 'react';
-import { DarkModeContext } from "../DarkModeContext";
+import { DarkModeContext } from "../context/DarkModeContext";
 
 export default function App() {
   const {darkMode, toggleDarkMode} = useContext(DarkModeContext)

@@ -507,7 +507,7 @@ input[type='radio']:checked:after {
 }
 
 .w-25{
-  width: 25%;
+  width: 50%;
 }
 
 .tx-center{
@@ -556,10 +556,9 @@ input[type='radio']:checked:after {
   .ctr-form{
     width: 90vw;
   }
-
 }
 
-@media (max-width: 890px) {
+/* @media (max-width: 890px) {
   .experience-content {
     width: 860px;
   }
@@ -571,7 +570,7 @@ input[type='radio']:checked:after {
     display: none;
   }
 
-}
+} */
 
 @media (max-width: 550px) {
   .experience-content {

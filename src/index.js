@@ -8,13 +8,14 @@ import Single from "./pages/Single";
 import Book from './pages/Book';
 import Register from "./pages/Register";
 import SignIn from "./pages/SignIn";
+import { AuthProvider } from './context/AuthProvider';
 
 import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { DarkModeProvider } from './DarkModeContext';
+import { DarkModeProvider } from './context/DarkModeContext';
 
 
 const router = createBrowserRouter([
@@ -44,9 +45,11 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <AuthProvider>
     <DarkModeProvider>
       <RouterProvider router={router}/>
     </DarkModeProvider>
+    </AuthProvider>
   </React.StrictMode>
 );
 

@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import RegisterForm from '../components/RegisterForm';
 import {useContext} from "react";
-import {DarkModeContext} from '../DarkModeContext';
+import {DarkModeContext} from '../context/DarkModeContext';
 
 export default function Register() {
   // useRef on user's input focus and error
