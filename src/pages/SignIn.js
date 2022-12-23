@@ -7,9 +7,9 @@ export default function SignIn() {
   const {darkMode, toggleDarkMode} = useContext(DarkModeContext)
 
   return(
-    <>
+    <div className={darkMode ? "dark" : ""}>
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <SignInForm darkMode={darkMode} />
-    </>
+    </div>
   )
 };

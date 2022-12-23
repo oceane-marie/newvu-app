@@ -63,19 +63,22 @@ export default function SignIn(props) {
   }
 
   return(
-    <>
+    <div className='ctr-centered'>
       {success ? (
-        <section>
+        <section className={`ctr-form h-100 ${props.darkMode ? "dark-shadow" : "clear-shadow"}`}>
+          <img src="https://images.unsplash.com/photo-1520453803296-c39eabe2dab4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aGVsbG98ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="user" className="img-form"/>
           <h2>You are logged in!</h2>
           <br/>
           <p>
             <a href="#">Go to home</a>
           </p>
         </section>
-      ) : (<section>
+      ) : (<section className={`ctr-form h-100 ${props.darkMode ? "dark-shadow" : "clear-shadow"}`}>
       <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-      <h2>Sign In</h2>
-      <form onSubmit={handleSubmit}>
+      <img src="https://images.unsplash.com/photo-1543332164-6e82f355badc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8d2VsY29tZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60" alt="user" className="img-form"/>
+
+      <form className='form-content' onSubmit={handleSubmit}>
+        <h2>Sign In</h2>
         <label htmlFor="username">Username:</label>
         <input
             type="text"
@@ -86,20 +89,31 @@ export default function SignIn(props) {
             // controlled component => important to clean
             value={user}
             required
+            className={props.darkMode ? "dark-input" : ""}
         />
-        <label htmlFor="password">Password:</label>
+        <label
+            htmlFor="password"
+            className='mt-24'>
+              Password:
+        </label>
         <input
             type="password"
             id="password"
             onChange={(e) => setPwd(e.target.value)}
             value={pwd}
             required
+            className={props.darkMode ? "dark-input" : ""}
         />
-        <button>Sign In</button>
+        <button className={`btn-send w-100 mt-24 ${props.darkMode ? "clear" : "dark"}`}>
+          <h3>
+          Sign In
+          </h3>
+        </button>
+        <p> Need an account?</p>
+        <Link to="/register" className={`btn-send w-25 ${props.darkMode ? "clear" : "dark"}`}><p className='tx-center mb-5'>Register</p></Link>
       </form>
-      <p> Need an account?<br/><span><Link to="/register"><p>Register</p></Link></span></p>
     </section>
     )}
-    </>
+    </div>
   )
 };
