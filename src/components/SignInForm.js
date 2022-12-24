@@ -1,6 +1,6 @@
 
 import { useRef, useEffect, useState } from "react"
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 // import { useContext } from "react";
 // import AuthContext from "../context/AuthProvider";
@@ -64,16 +64,10 @@ export default function SignIn(props) {
 
   return(
     <div className='ctr-centered'>
-      {success ? (
-        <section className={`ctr-form h-100 ${props.darkMode ? "dark-shadow" : "clear-shadow"}`}>
-          <img src="https://images.unsplash.com/photo-1520453803296-c39eabe2dab4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aGVsbG98ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="user" className="img-form w-100 br-full"/>
-          {/* <h2>You are logged in!</h2>
-          <br/>
-          <p>
-            <a href="#">Go to home</a>
-          </p> */}
-        </section>
-      ) : (<section className={`ctr-form h-100 ${props.darkMode ? "dark-shadow" : "clear-shadow"}`}>
+      {success && (
+          <Navigate to="/profile" replace={true} />
+      )}
+      <section className={`ctr-form h-100 ${props.darkMode ? "dark-shadow" : "clear-shadow"}`}>
       <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
       <img src="https://images.unsplash.com/photo-1543332164-6e82f355badc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8d2VsY29tZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60" alt="user" className="img-form"/>
 
@@ -113,7 +107,6 @@ export default function SignIn(props) {
         <Link to="/register" className={`btn-send w-50 ${props.darkMode ? "clear" : "dark"}`}><p className='tx-center mb-m5'>Register</p></Link>
       </form>
     </section>
-    )}
     </div>
   )
 };

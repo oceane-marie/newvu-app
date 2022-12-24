@@ -1,5 +1,5 @@
 import {useRef, useState, useEffect} from 'react';
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
 // ----------------- //
 // if axios implemented
@@ -80,6 +80,7 @@ export default function RegisterForm(props) {
       }
       console.log(user, pwd);
       setSuccess(true);
+
       // ----------------- //
       // if axios implemented
       // try{
@@ -110,18 +111,11 @@ export default function RegisterForm(props) {
 
    return(
     <div className='ctr-centered'>
-    {success ? (
-      <section className={`ctr-form ${props.darkMode ? "dark-shadow" : "clear-shadow"}`}>
-        <img
-            src="https://images.unsplash.com/photo-1518893494013-481c1d8ed3fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZXhwZXJpZW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
-            alt="new user"
-            className="img-form br-full"/>
-        {/* <h2>Sucess!</h2>
-        <a href="#" className={`btn-send w-50 ${props.darkMode ? "clear" : "dark"}`}>
-          <p className='tx-center'>Sign in</p>
-        </a> */}
-      </section>
-    ) : (
+
+      {success && (
+          <Navigate to="/profile" replace={true} />
+      )}
+
       <section className={`ctr-form h-100 ${props.darkMode ? "dark-shadow" : "clear-shadow"}`}>
         <img src="https://images.unsplash.com/photo-1518893494013-481c1d8ed3fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZXhwZXJpZW5jZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="new user" className="img-form"/>
         <form className='form-content' onSubmit={handleSubmit}>
@@ -217,18 +211,21 @@ export default function RegisterForm(props) {
             <i class="fa-solid fa-circle-info"></i>
             Must match the first password input field.
           </p>
-        <button
-            className={`btn-send w-100 mt-24 ${props.darkMode ? "clear" : "dark"}`}
-            disabled={!validName || !validPwd || !validMatch ? true : false}>
-              <h3>Sign up</h3>
-        </button>
+
+          <button
+              className={`btn-send w-100 mt-24 ${props.darkMode ? "clear" : "dark"}`}
+              disabled={!validName || !validPwd || !validMatch ? true : false}
+          >
+            <h3>Sign up</h3>
+          </button>
+
         <p>Already registered?</p>
         <Link to="/signin" className={`btn-send w-50 ${props.darkMode ? "clear" : "dark"}`}>
           <p className='tx-center mb-p5'>Sign in</p>
         </Link>
         </form>
       </section>
-    )}
+
     </div>
    )
 };

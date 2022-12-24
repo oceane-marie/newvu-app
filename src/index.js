@@ -8,6 +8,7 @@ import Single from "./pages/Single";
 import Book from './pages/Book';
 import Register from "./pages/Register";
 import SignIn from "./pages/SignIn";
+import Profile from './pages/Profile';
 import { AuthProvider } from './context/AuthProvider';
 
 import reportWebVitals from './reportWebVitals';
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: "/signin",
     element: <SignIn />,
+  },
+  {
+    path: "/profile",
+    element: <Profile />,
   },
 ]);
 
