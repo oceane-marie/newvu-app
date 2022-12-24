@@ -1,11 +1,18 @@
 import {useRef, useState, useEffect} from 'react';
 import { Link } from "react-router-dom";
 
+// ----------------- //
+// if axios implemented
+// import axios from '../api/axios';
+// const REGISTER_URL = "/register"
+// ----------------- //
 
 // 1 lower or uppercase followed by btw 3 and 23 characters lower/upper/numbers
 const USER_REGEX = /^[a-zA-Z][a-zA-Z0-9-_]{3,23}$/;
 // at least 1 lowercase character, 1 upper 1 special character btw 8 and 24 characters
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+
+
 export default function RegisterForm(props) {
   const userRef = useRef();
   const errRef = useRef();
@@ -73,6 +80,32 @@ export default function RegisterForm(props) {
       }
       console.log(user, pwd);
       setSuccess(true);
+      // ----------------- //
+      // if axios implemented
+      // try{
+      //   const response = await axios.post(REGISTER_URL,
+      //     JSON.stringify({user, pwd}),
+      //     {
+      //       hedars: {"Content-Type": "application/json"},
+      //       withCredentials: true
+      //     }
+      //   );
+      //   console.log(JSON.stringify(response))
+      //   setSuccess(true);
+      //   setUser('');
+      //   setPwd('');
+      //   setMatchPwd('');
+      // } catch (err) {
+      //   if (!err?.response) {
+      //     setErrMsg('No server response')
+      //   } else if (!err.reponse?.status === 409) {
+      //     setErrMsg('Username already taken')
+      //   } else {
+      //     setErrMsg('Registration failed')
+      //   }
+      //   errMsg.current.focus();
+      // }
+      // ----------------- //
    }
 
    return(
