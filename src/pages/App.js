@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Card from "../components/Card";
-import data from '../experiencesData';
+import data from '../data/experiencesData';
 import React, {useContext} from 'react';
 import { DarkModeContext } from "../context/DarkModeContext";
 

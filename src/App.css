@@ -590,3 +590,19 @@ input[type='radio']:checked:after {
     display: none;
 }
 }
+
+/* profile page */
+.avatar{
+  object-fit: cover;
+  object-position: center;
+  height: 200px; width: 200px;
+  border-radius: 50%;
+}
+
+.dir-column{
+  flex-direction: column;
+}
+
+.link{
+  background-color: #ff595e;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import {useParams} from 'react-router-dom';
-import data from "../experiencesData";
+import data from "../data/experiencesData";
 
 export default function Form(props) {
   const { experienceId } = useParams();

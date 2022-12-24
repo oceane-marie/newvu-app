@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Navbar from "../components/Navbar";
 import {DarkModeContext} from '../context/DarkModeContext';
 import Experience from "../components/Experience";
-import data from "../experiencesData";
+import data from "../data/experiencesData";
 
 
 export default function Single() {

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useLocation } from 'react-router-dom';
-import data from "../experiencesData";
+import data from "../data/experiencesData";
 import {Link} from 'react-router-dom';
 
 export default function Experience(props) {
