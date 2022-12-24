@@ -65,7 +65,7 @@ export default function SignIn(props) {
   return(
     <div className='ctr-centered'>
       {success && (
-          <Navigate to="/profile" replace={true} />
+          <Navigate to="/profile/:userId" replace={true} />
       )}
       <section className={`ctr-form h-100 ${props.darkMode ? "dark-shadow" : "clear-shadow"}`}>
       <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>

@@ -113,7 +113,7 @@ export default function RegisterForm(props) {
     <div className='ctr-centered'>
 
       {success && (
-          <Navigate to="/profile" replace={true} />
+          <Navigate to="/profile/:userId" replace={true} />
       )}
 
       <section className={`ctr-form h-100 ${props.darkMode ? "dark-shadow" : "clear-shadow"}`}>
