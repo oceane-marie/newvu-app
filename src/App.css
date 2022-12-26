@@ -58,7 +58,7 @@ nav{
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
 }
 
-.fa-user{
+.fa-user, .fa-arrow-right-to-bracket{
   padding-left: 36px;
   color: #F7585D;
   font-size: 24px;

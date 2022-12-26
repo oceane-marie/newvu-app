@@ -19,6 +19,9 @@ export default function Navbar(props) {
           Dark
         </p>
         <Link to="/register">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+        </Link>
+        <Link to="/profile/:userId">
           <i class="fa-regular fa-user"></i>
         </Link>
       </div>
